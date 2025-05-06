@@ -12,7 +12,7 @@ import { CircleProgressOptions, NgCircleProgressModule } from 'ng-circle-progres
     {
       provide: CircleProgressOptions,
       useValue: {
-        radius: 80,
+        radius: 70,
         outerStrokeWidth: 5,
         outerStrokeColor: '#ff3838',
         animation: true,
