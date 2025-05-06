@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 export class AppComponent  {
   aosInit() {
     AOS.init({
-      duration: 800,  
+      duration: 600,  
       easing: 'ease-in-out',
       once: true,  
       mirror: false 
