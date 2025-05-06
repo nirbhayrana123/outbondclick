@@ -1247,6 +1247,10 @@ section.case-sturdy-section h2{
   background-color: #fff;
   position:relative;
 }
+.maincsertyu {
+  position: relative;
+  z-index: 1;
+}
 .contact::after{
   position: absolute;
   right: 0;
