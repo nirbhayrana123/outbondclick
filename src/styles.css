@@ -1116,6 +1116,7 @@ a.logo {
 }
 .chooes-section .section-title{
   text-align: left;
+  padding-bottom: 0;
 }
 .chooes-section .section-title h2:after{
 content: "";
