@@ -1,0 +1,7 @@
+<div *ngFor="let faq of faqs; let i = index" class="faq-item" [ngClass]="{'faq-active': faq.isActive}">
+    <h3 (click)="toggleFAQ(i)">{{ faq.question }}</h3>
+    <div class="faq-content" *ngIf="faq.isActive">
+      <p>{{ faq.answer }}</p>
+    </div>
+    <i class="faq-toggle" [ngClass]="{'bi-chevron-down': faq.isActive, 'bi-chevron-right': !faq.isActive}"></i>
+  </div>
