@@ -1704,6 +1704,8 @@ label.form-label {
 .contact .contact-form {
   padding: 3rem;
   height: 100%;
+  position: relative;
+  z-index: 9;
 }
 
 .contact .contact-form h3 {
