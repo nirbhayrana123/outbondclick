@@ -1955,8 +1955,8 @@ a:hover {
 .slick-dots li button {
   background-color: #fff !important;
   border-radius: 100px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;

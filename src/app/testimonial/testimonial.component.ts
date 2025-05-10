@@ -1,22 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit,   } from '@angular/core';
-import $ from 'jquery';  // Ensure you're using 'import * as $' for proper type recognition
-declare global {
-  interface JQuery {
-    slick: any; // Declare the slick method on jQuery
-  }
-}
+import { CommonModule  } from '@angular/common';
+import { Component    } from '@angular/core';
+import $ from 'jquery';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 @Component({
   selector: 'app-testimonial',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,SlickCarouselModule],
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.css']
 })
-export class TestimonialComponent implements OnInit  {
-
- 
-
+export class TestimonialComponent {
 
   slideConfig = {
     dots: true,
@@ -78,10 +72,10 @@ export class TestimonialComponent implements OnInit  {
     }
   ];
 
-  ngOnInit() {
-    $(document).ready(() => {
-      $('.testimonial-slider').slick(this.slideConfig); // No TypeScript error should occur now
-    });
-  }
+//  ngAfterViewInit(): void {
+//     setTimeout(() => {
+//       $('.testimonial-slider').slick(this.slideConfig);
+//     }, 0);
+//   }
 }
 

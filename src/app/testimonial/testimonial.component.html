@@ -1,20 +1,19 @@
-<div class="testimonial-slider">
-    <div class="item" *ngFor="let testimonial of testimonials">
-      <div class="testimonial-item">
-        <div class="client-info-detail">
-          <figure class="imagefigresr"><img [src]="testimonial.img" class="testimonial-img" alt=""></figure>
-          
-          <div class="client-info-name">
-            <h3>{{ testimonial.name }}</h3>
-            <h4>{{ testimonial.role }}</h4>
-          </div>
+<ngx-slick-carousel 
+  class="testimonial-slider" 
+  [config]="slideConfig"
+>
+  <div ngxSlickItem *ngFor="let testimonial of testimonials" class="item">
+    <div class="testimonial-item">
+      <div class="client-info-detail">
+        <figure class="imagefigresr">
+          <img [src]="testimonial.img" class="testimonial-img" alt="">
+        </figure>
+        <div class="client-info-name">
+          <h3>{{ testimonial.name }}</h3>
+          <h4>{{ testimonial.role }}</h4>
         </div>
-        <p>
-          <span>{{ testimonial.text }}</span>
-        </p>
-        
       </div>
+      <p><span>{{ testimonial.text }}</span></p>
     </div>
   </div>
-  
-  
+</ngx-slick-carousel>

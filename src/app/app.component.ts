@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AOS from 'aos';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,25 +11,29 @@ import 'aos/dist/aos.css';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
-  aosInit() {
+export class AppComponent implements OnInit, AfterViewInit  {
+ ngOnInit(): void {
     AOS.init({
-      duration: 600,  
+      duration: 800,
       easing: 'ease-in-out',
-      once: false,  
-      mirror: false 
+      once: false,
+      mirror: false
     });
   }
 
-  ngOnInit(): void {
-   
-    this.aosInit();
-  }
-
   ngAfterViewInit(): void {
-
-    this.aosInit();
+    AOS.refresh(); // Optional, if content loads later
   }
+
+  // ngOnInit(): void {
+   
+  //   this.aosInit();
+  // }
+
+  // ngAfterViewInit(): void {
+
+  //   this.aosInit();
+  // }
   title = 'my-angular-app';
 
 }
