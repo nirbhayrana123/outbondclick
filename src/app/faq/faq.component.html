@@ -1,4 +1,4 @@
-<div *ngFor="let faq of faqs; let i = index" class="faq-item" [ngClass]="{'faq-active': faq.isActive}">
+<div *ngFor="let faq of faqs; let i = index" class="faq-item" data-aos="fade-up" data-aos-delay="100"  [ngClass]="{'faq-active': faq.isActive}">
     <h3 (click)="toggleFAQ(i)">{{ faq.question }}</h3>
     <div class="faq-content" *ngIf="faq.isActive">
       <p>{{ faq.answer }}</p>
