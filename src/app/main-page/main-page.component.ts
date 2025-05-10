@@ -6,7 +6,7 @@ import { FaqComponent } from '../faq/faq.component';
 import { CircleProgressOptions, NgCircleProgressModule } from 'ng-circle-progress';
 @Component({
   selector: 'app-main-page',
-  imports: [TestimonialComponent,VideoSliderComponent,FormComponent, FaqComponent,NgCircleProgressModule ],
+  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule],
 
   providers: [
     {
@@ -17,7 +17,7 @@ import { CircleProgressOptions, NgCircleProgressModule } from 'ng-circle-progres
         outerStrokeColor: '#ff3838',
         animation: true,
         animationDuration: 800,
-       innerStrokeWidth: 0
+        innerStrokeWidth: 0
       }
     }
   ],

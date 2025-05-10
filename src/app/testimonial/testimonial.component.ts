@@ -1,12 +1,12 @@
-import { CommonModule  } from '@angular/common';
-import { Component    } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import $ from 'jquery';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-testimonial',
   standalone: true,
-  imports: [CommonModule,SlickCarouselModule],
+  imports: [CommonModule, SlickCarouselModule],
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.css']
 })
@@ -14,10 +14,10 @@ export class TestimonialComponent {
 
   slideConfig = {
     dots: true,
-    arrows: false,  
+    arrows: false,
     infinite: true,
     speed: 800,
-    slidesToShow: 2, 
+    slidesToShow: 2,
     slidesToScroll: 2,
     //  autoplay: true,
     autoplaySpeed: 3000,
@@ -72,10 +72,10 @@ export class TestimonialComponent {
     }
   ];
 
-//  ngAfterViewInit(): void {
-//     setTimeout(() => {
-//       $('.testimonial-slider').slick(this.slideConfig);
-//     }, 0);
-//   }
+  //  ngAfterViewInit(): void {
+  //     setTimeout(() => {
+  //       $('.testimonial-slider').slick(this.slideConfig);
+  //     }, 0);
+  //   }
 }
 
