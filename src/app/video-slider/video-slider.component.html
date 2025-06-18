@@ -1,13 +1,26 @@
-<ngx-slick-carousel
-  class="video-slider"
-  [config]="slideConfig"
->
+ 
+<ngx-slick-carousel class="video-slider" [config]="slideConfig">
   <div ngxSlickItem *ngFor="let video of videos" class="item play-videos">
-    <div class="videoicon">
-      <a href="#"><i class="bi bi-play-circle-fill"></i></a>
+    <div class="video-wrapper">
+      <img [src]="video.poster" alt="poster" class="video-thumb" />
+
+      <!-- Play Icon Overlay -->
+      <div class="videoicon" (click)="openVideo(video.src)">
+        <i class="bi bi-play-circle-fill"></i>
+      </div>
     </div>
-    <video controls preload="auto" playsinline [poster]="video.poster">
-      <source [src]="video.src" type="video/mp4" />
-    </video>
   </div>
 </ngx-slick-carousel>
+
+<!-- Custom Modal -->
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-content">
+    <button class="close-btn" (click)="closeModal()">×</button>
+    <video
+      [src]="currentVideo"
+      autoplay
+      controls
+      style="width: 100%; height: auto"
+    ></video>
+  </div>
+</div>
