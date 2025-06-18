@@ -8,7 +8,7 @@ import { interval } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
 @Component({
   selector: 'app-main-page',
-  imports: [TestimonialComponent,VideoSliderComponent,FormComponent, FaqComponent,NgCircleProgressModule ],
+  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule],
 
   providers: [
     {
@@ -19,7 +19,7 @@ import { takeWhile } from 'rxjs/operators';
         outerStrokeColor: '#ff3838',
         animation: true,
         animationDuration: 800,
-       innerStrokeWidth: 0
+        innerStrokeWidth: 0
       }
     }
   ],

@@ -7,12 +7,12 @@ import AOS from 'aos';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ HeaderComponent, FooterComponent,RouterModule ],
+  imports: [HeaderComponent, FooterComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit  {
- ngOnInit(): void {
+export class AppComponent implements OnInit, AfterViewInit {
+  ngOnInit(): void {
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
   }
 
   // ngOnInit(): void {
-   
+
   //   this.aosInit();
   // }
 

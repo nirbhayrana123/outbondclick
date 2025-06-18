@@ -7,12 +7,12 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 @Component({
   selector: 'app-video-slider',
   standalone: true,
-  imports: [CommonModule,SlickCarouselModule],
+  imports: [CommonModule, SlickCarouselModule],
 
   templateUrl: './video-slider.component.html',
   styleUrl: './video-slider.component.css'
 })
-export class VideoSliderComponent  {
+export class VideoSliderComponent {
 
   slideConfig = {
     dots: false,
