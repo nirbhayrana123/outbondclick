@@ -140,6 +140,25 @@ width: 25%;
       .review-box img {
         margin-bottom: 10px;
       }
+      .main-flex {
+    flex-wrap: wrap;
+}
+.trustsection .card {
+    width: 100%;
+}
+
+.center-buonds a.cusumebutton { 
+    width: 80% 
+}
+.about-problum { 
+    flex-wrap: wrap ;
+}
+.about-grid { 
+    display: block;
+}
+.col-md-6.col-12.sticky-div {
+    display: none;
+}
     }
 
 
