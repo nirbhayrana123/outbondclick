@@ -1,0 +1,136 @@
+  
+.review {
+    display: flex;
+    align-items: center;
+}
+.clutchflex {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.card.sizes-pros {
+    background-color: aliceblue;
+}
+    .review-box {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .review-box img {
+      height: 60px;
+      margin-right: 15px;
+    }
+.main-flex {
+    display: flex;
+    gap: 24px;
+}
+    .stars {
+      color: rgb(173, 147, 0);
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .rating {
+      font-size: 18px;
+    }
+.card.absolutet img {
+    height: revert-layer;
+}
+.card.absolutet {
+    background-color: transparent;
+    border: none;
+}
+    .card {  
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      color: #e4005d;
+      font-weight: bold;
+      font-size: 24px;
+    }
+.rating {
+    margin-left: 25px;
+    text-align: left;
+    line-height: 30px;
+}
+    .card p {
+      margin: 10px 0 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .cta-card {
+      flex: 1 1 280px;
+      background: linear-gradient(90deg, #923bde, #3276ff);
+      color: white;
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .cta-card p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .cta-card a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .review-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .review-box img {
+        margin-bottom: 10px;
+      }
+    }
+
+
+    /******************/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+

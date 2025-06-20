@@ -2,50 +2,55 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import $ from 'jquery';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SafeUrlPipe } from '../safe-url.pipe';
 
 
 @Component({
   selector: 'app-video-slider',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule],
+  imports: [CommonModule, SlickCarouselModule, SafeUrlPipe,],
 
   templateUrl: './video-slider.component.html',
   styleUrl: './video-slider.component.css'
 })
 export class VideoSliderComponent {
 
-  slideConfig = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: false,
-    prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 1024, // tablet
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 768, // mobile
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+slideConfig = {
+  dots: false,
+  arrows: true,
+  infinite: false, // loop off
+  speed: 800,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  autoplay: false,
+  prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left"></i></button>',
+  nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right"></i></button>',
+  responsive: [
+    {
+      breakpoint: 1024, // tablet
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: false // loop off for tablet
       }
-    ]
-  };
+    },
+    {
+      breakpoint: 768, // mobile
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false // loop off for mobile
+      }
+    }
+  ]
+};
+
 
 
   videos = [
     {
-      src: 'https://www.youtube.com/embed/g_SvNVNb-nA',
+      
+      src: 'https://www.youtube.com/embed/g_SvNVNb-nA?autoplay=1',
       poster: 'https://img.youtube.com/vi/g_SvNVNb-nA/maxresdefault.jpg'
     },
     {

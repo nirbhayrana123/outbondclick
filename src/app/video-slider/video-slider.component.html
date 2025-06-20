@@ -16,11 +16,11 @@
 <div class="modal-overlay" *ngIf="showModal">
   <div class="modal-content">
     <button class="close-btn" (click)="closeModal()">×</button>
-    <video
-      [src]="currentVideo"
-      autoplay
-      controls
-      style="width: 100%; height: auto"
-    ></video>
+    <iframe height="800"
+  [src]="currentVideo | safeUrl"
+  frameborder="0"
+  allowfullscreen
+  class="w-full custome-hight"
+></iframe>
   </div>
 </div>

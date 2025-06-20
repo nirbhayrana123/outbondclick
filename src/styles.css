@@ -338,7 +338,7 @@ ul {
 }
 
 .news-leater {
-  background-color: var(--accent-color);
+  background-color: #555555;
 }
 
 .whitebuttonds a.cutomeherobutton {
@@ -357,7 +357,7 @@ ul {
 }
 
 .footer {
-  background-color: #00014d;
+  background-color: #20203a;
   padding-top: 40px;
 }
 
@@ -371,7 +371,7 @@ ul {
 }
 
 .copy-right {
-  background-color: #00014d;
+  background-color: #20203a;
   padding: 17px 0px;
   margin-top: 60px;
   border-top:1px solid #eee;
@@ -402,11 +402,13 @@ ul {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: var(--accent-color);
+  background-color: #fff;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
 }
+
+
 
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -649,7 +651,7 @@ figure {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #ffffff;
   padding: 60px 0;
   scroll-margin-top: 90px;
 }
