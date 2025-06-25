@@ -6,6 +6,7 @@ import { FaqComponent } from '../faq/faq.component';
 import { CircleProgressOptions, NgCircleProgressModule } from 'ng-circle-progress';
 import { interval } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-main-page',
   imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule],
@@ -29,7 +30,21 @@ import { takeWhile } from 'rxjs/operators';
 export class MainPageComponent {
 
 
+   showModal = false;
+  safeVideoUrl!: SafeResourceUrl;
 
+  constructor(private sanitizer: DomSanitizer) {}
+
+  openModal() {
+    const url = 'https://www.youtube.com/embed/EKHjK_iBROA?autoplay=1&mute=1';
+    this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+    this.safeVideoUrl = '';
+  }
 
 animateValues() {
   this.animate('fromValue', 25, 50, 1);

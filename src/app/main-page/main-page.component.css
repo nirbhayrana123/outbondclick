@@ -98,13 +98,13 @@
   .trustsection .card.sizes-pros h4 span.sizes {
     min-height: 59px;
     margin-top: 10px;
-    color: #ffffff;
+    color: #17313b;
     font-weight: 600;
     font-size: 1.5rem;
   }
 
   .trustsection .card.sizes-pros h4 {
-       color: #fc7034;
+       color: #f46d85;
     font-weight: bold;
     font-size: 2rem;
 }
@@ -132,9 +132,13 @@
     margin: 10px 0 0;
     font-size: 16px;
     font-weight: 500;
-    color: #fbfbfb;
+    color: #17313b;
   }
-
+.border-only:hover {
+    color: #ffffff;
+    background-color: #a9343b !important;
+    border: none !important;
+}
   .b-alge h4 {
     font-size: 2.3rem;
   }
@@ -171,6 +175,87 @@
     max-width: 70%;
     margin: 0 auto 30px;
   }
+
+
+
+
+  /***********video modal*******************/
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #000;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*******************form *********************/
+
+
+
 
   @media (max-width: 768px) {
     .review-box {

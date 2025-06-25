@@ -825,10 +825,12 @@ section,
     text-decoration: none;
 } */
 .cutomeherobutton:hover {
-  color: #ffffff;
+    color: #ffffff;
+    background-color: #a9343b !important;
+    /* border: none!important; */
 }
 
-.cutomeherobutton::after {
+/* .cutomeherobutton::after {
   left: 0;
   top: 0;
   content: "";
@@ -840,7 +842,7 @@ section,
   -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: -1;
-}
+} */
 
 .cutomeherobutton:hover::after {
   width: 100%;
