@@ -396,8 +396,35 @@
     width: 200px;
   }
 
-  @media (max-width: 768px) {
-    .banner h1 {
-      font-size: 36px;
+  @media (max-width: 767px) {
+       .banner  h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .graphic-left  { 
+    display: none;
+}
+.hero .hero-content h1 .accent-text { 
+    font-size: 2rem; 
+}
+.graphic-right { 
+    display: none;
+}
+.header .logo img {
+        width: 200px;
+    }
+        .hero-buttons {
+        display: block;
+    }
+    .border-only { 
+    width: 100%; 
+}
+    .cutomeherobutton { 
+        width: 100%; 
+                margin-bottom: 10px;
+    }
+        .hero {
+        padding-top: 150px;
     }
   }

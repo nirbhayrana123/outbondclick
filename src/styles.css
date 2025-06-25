@@ -2608,9 +2608,10 @@ img.graphic-left.rights-google {
     padding-top: 0;
   }
 
-  .header .logo img {
-    width: 140px;
-  }
+ .header .logo img {
+    max-height: max-content;
+    width: 240px;
+}
 
   .content-case h5 {
     font-size: 20px;
