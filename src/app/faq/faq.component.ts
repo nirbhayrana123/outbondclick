@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
+
 })
 export class FaqComponent {
   faqs = [
@@ -55,3 +56,11 @@ export class FaqComponent {
 
 
 }
+
+
+
+
+
+
+
+

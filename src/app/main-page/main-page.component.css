@@ -26,11 +26,27 @@
     margin-right: 15px;
   }
 
-  .main-flex {
+  .main-flex  {
     display: flex;
     gap: 24px;
-  }
+    justify-content: space-between;
+}
+.boxiseda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+img.sizing-fit {
+    width: 100px;
+}
 
+.slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   .stars {
     color: rgb(252 112 52);
     font-size: 24px;
@@ -83,7 +99,7 @@
   }
 
   .trustsection .card.sizes-pros:after {
-   content: "";
+    content: "";
     background: #ee4f7733;
     width: 100%;
     height: 100%;
@@ -93,7 +109,7 @@
     border-radius: 20px;
     opacity: 0.8;
     z-index: 9;
-}
+  }
 
   .trustsection .card.sizes-pros h4 span.sizes {
     min-height: 59px;
@@ -104,10 +120,10 @@
   }
 
   .trustsection .card.sizes-pros h4 {
-       color: #f46d85;
+    color: #f46d85;
     font-weight: bold;
     font-size: 2rem;
-}
+  }
 
   .trustsection .card.sizes-pros img,
   .trustsection .card.sizes-pros h4,
@@ -134,11 +150,13 @@
     font-weight: 500;
     color: #17313b;
   }
-.border-only:hover {
+
+  .border-only:hover {
     color: #ffffff;
     background-color: #a9343b !important;
     border: none !important;
-}
+  }
+
   .b-alge h4 {
     font-size: 2.3rem;
   }
@@ -180,117 +198,80 @@
 
 
   /***********video modal*******************/
-.video-thumbnail {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  cursor: pointer;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.video-thumbnail img {
-  width: 100%;
-  display: block;
-}
-
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  color: white;
-  text-shadow: 0 0 10px black;
-}
-
-/* Modal Styles */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: white;
-  width: 90%;
-  max-width: 800px;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  color: #000;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-
-.video-container iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-/*******************form *********************/
-
-
-
-
-  @media (max-width: 768px) {
-    .review-box {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .review-box img {
-      margin-bottom: 10px;
-    }
-
-    .main-flex {
-      flex-wrap: wrap;
-    }
-
-    .trustsection .card {
-      width: 100%;
-    }
-
-    .center-buonds a.cusumebutton {
-      width: 80%
-    }
-
-    .about-problum {
-      flex-wrap: wrap;
-    }
-
-    .about-grid {
-      display: block;
-    }
-
-    .col-md-6.col-12.sticky-div {
-      display: none;
-    }
+  .video-thumbnail {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
   }
+
+  .video-thumbnail img {
+    width: 100%;
+    display: block;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+
+
 
 
   /******************/
@@ -329,15 +310,6 @@
     width: 250px;
   }
 
-
-
-
-
-
-
-
-
-
   .banner h1 {
     font-size: 55px;
     font-weight: 700;
@@ -346,13 +318,15 @@
   }
 
   .banner p {
-    font-size: 19px;
+    font-size: 1rem;
     max-width: 800px;
     margin: 0 auto 40px;
     color: #0d0d0d;
     font-weight: 400;
   }
-
+section.bootom {
+    padding-top: 0;
+}
   .buttons {
     display: flex;
     justify-content: center;
@@ -396,35 +370,212 @@
     width: 200px;
   }
 
-  @media (max-width: 767px) {
-       .banner  h1 {
-        font-size: 2rem;
-        line-height: 2.5rem;
+  .flexs-wrap {
+    display: flex;
+  }
+
+  
+
+  /****************************************/
+
+
+  @media (max-width: 1600px) {
+ .reviwe {
+    width: 55%;
+}
+  }
+
+  @media (max-width: 1024px) {
+    .hero {
+      padding-top: 250px;
+    }
+.center-buonds a.cusumebutton { 
+    width: 30%; 
+}
+.case-study {
+    height: auto;
+}
+    .flexs-wrap {
+      display: flex;
     }
 
+    .graphic-right {
+      width: 90px !important;
+    }
+
+    .trustsection .card.sizes-pros h4 span.sizes {
+      font-size: 1.3rem;
+    }
+
+.main-flex  { 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+  }
+
+  @media (max-width: 767px) {
+    .banner h1 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+.sticky-div { 
+    height: auto;
+}
+    .section-title h2 {
+        font-size: 25px;
+    }
+    .flexs-wrap {
+      flex-wrap: wrap;
+    }
+.chooes-section .section-title {
+    text-align: center; 
+}
+.text-left {
+    text-align: center;
+}
+.content-con span {
+    text-align: left;
+    margin-left: 10px;
+}
+    .left-smart-content h3 {
+        font-size: 25px;
+    }
+    .section-title h2 {
+    text-align: center;
+}
+.contact-form .section-title {
+    text-align: center;
+}
+.right-img::after { 
+    right: -7px;
+    top: 6px; 
+    z-index: -9;
+    height: 468px;
+}
+.right-img img { 
+    height: 500px; 
+}
+.right-img { 
+    height: 520px; 
+}
+    .flex-items p {
+    text-align: left;
+}
+    .faq .faq-title {
+        font-size: 25px;
+    }
+    .left-smart-content {
+    padding-left: 0px;
+    text-align: center;
+}
+    .review {
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+    }
+    .rating {
+    margin-left: 0px; 
+}
+.clutchflex  {
+    text-align: center; 
+}
+
+    .graphic-left {
+      display: none;
+    }
+
+    .hero .hero-content h1 .accent-text {
+      font-size: 2rem;
+    }
+
+    .graphic-right {
+      display: none;
+    }
+
+    .header .logo img {
+      width: 200px;
+    }
+
+    .hero-buttons {
+      display: block;
+    }
+
+    .border-only {
+      width: 100%;
+    }
+
+    .cutomeherobutton {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .hero {
+      padding-top: 120px;
+    }
+   
+    .platform-eading {
+        padding: 30px 0px;
+    }
+        .platform-eading h3 {
+        font-size: 25px;
+    }
+    .testimonials .section-title {
+    text-align: center;
+}
+p.text-muted {
+    text-align: center;
+}
+  }
+
+  @media (max-width: 768px) {
+    .review-box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    .review-box img {
+      margin-bottom: 10px;
+    }
+
+    .main-flex {
+      flex-wrap: wrap;
+    }
+
+    .trustsection .card {
+      width: 100%;
+    }
+
+    .center-buonds a.cusumebutton {
+      width: 80%
+    }
+
+    .about-problum {
+      flex-wrap: wrap;
+    }
+
+    .about-grid {
+      display: block;
+    }
+
+    img.graphic-left.rights-google { 
+    top: 155px;
+}
     .graphic-left  { 
-    display: none;
+    top: 145px; 
 }
-.hero .hero-content h1 .accent-text { 
-    font-size: 2rem; 
+.graphic-right  { 
+    bottom: 0px; 
 }
-.graphic-right { 
-    display: none;
-}
-.header .logo img {
-        width: 200px;
+  }
+
+
+  @media (max-width: 600px) {
+    .hero {
+        padding-top: 165px;
     }
-        .hero-buttons {
-        display: block;
-    }
-    .border-only { 
-    width: 100%; 
-}
-    .cutomeherobutton { 
-        width: 100%; 
-                margin-bottom: 10px;
-    }
-        .hero {
-        padding-top: 150px;
-    }
+
   }

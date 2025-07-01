@@ -558,8 +558,7 @@ section.chooes-section {
   padding: 15px 50px;
   font-weight: 800;
   overflow: hidden;
-  color: #ffffff;
-  /* background: var(--accent-color); */
+  color: #ffffff; 
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   border-radius: 10px;
@@ -791,7 +790,7 @@ section,
   background: linear-gradient(90deg, #ff4e01, #0002ad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3rem;
+  font-size: 55px;
   font-weight: bold;
 }
 
@@ -807,42 +806,14 @@ section,
   padding: 0px 22px;
 }
 
-/* .cutomeherobutton {
-  font-family: var(--poppins-font);
-  position: relative;
-    font-size: 16px;
-    line-height: 28px;
-    padding: 15px 50px;
-    font-weight: 800;
-    overflow: hidden;
-    color: #ffffff;
-    background: var(--accent-color);
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 1;
-    text-decoration: none;
-} */
+
 .cutomeherobutton:hover {
     color: #ffffff;
-    background-color: #a9343b !important;
-    /* border: none!important; */
+    background-color: #a9343b !important; 
 }
 
-/* .cutomeherobutton::after {
-  left: 0;
-  top: 0;
-  content: "";
-  background-color: #01026b;
-  border-radius: 5px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  z-index: -1;
-} */
+ 
+
 
 .cutomeherobutton:hover::after {
   width: 100%;
@@ -935,7 +906,7 @@ button.cutomeherobutton.dark {
 
 .about .feature-list li i {
   color: var(--accent-color);
-  font-size: 18px;
+  font-size: 26px;
 }
 
 .about .profile .profile-image {
@@ -1435,8 +1406,7 @@ section.case-sturdy-section h2 {
   width: 100%;
   border: 1px solid #ccc;
   overflow: hidden;
-  background-color: #010259b3;
-  height: 120px;
+  background-color: #010259b3; 
 }
 
 .case-study::after {
@@ -2056,6 +2026,27 @@ img.graphic-left.rights-google {
     width: 80px;
     top: 133px;
 }
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   .cutomeherobutton {
+    font-size: 16px;
+    width: 315px;
+    font-weight: 600;
+    background-color: #00016b !important;
+    color: #ffffff;
+    padding: 13px 30px !important;
+    border-radius: 10px;
+    font-family: var(--poppins-font);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+  }
+    
+
+
 
 @media (max-width: 1550px) {
   .about .about-title {
@@ -2158,24 +2149,9 @@ img.graphic-left.rights-google {
     font-size: 16px;
   }
 
-  .cutomeherobutton {
-    font-size: 16px;
-    width: 315px;
-    font-weight: 600;
-    background-color: #00016b !important;
-    color: #ffffff;
-    padding: 13px 30px !important;
-    border-radius: 10px;
-    font-family: var(--poppins-font);
-    text-decoration: none;
-    text-align: center;
-  }
+ 
 
-  .hero-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
 
   .vecters-img h2 {
     font-size: 32px;
@@ -2390,7 +2366,7 @@ img.graphic-left.rights-google {
 
 @media (max-width: 992px) {
 
-
+    
   .why-higroth-right {
     padding-left: 0;
     position: relative;
@@ -2591,7 +2567,9 @@ img.graphic-left.rights-google {
   .platform-eading h3 {
     font-size: 30px;
   }
-
+    .hero {
+        padding-top: 160px;
+    }
 
 
 
