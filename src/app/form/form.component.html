@@ -1,46 +1,81 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
   <div class="row gy-4">
 
-     
-  
-      <!-- <div class="col-md-12">
-        <label class="form-label d-block">Platforms of Interest</label>
-        <div class="form-check form-check-inline" *ngFor="let platform of platforms; let i = index">
-          <input class="form-check-input" type="checkbox" [formControl]="platformControls.at(i)" />
-          <label class="form-check-label">{{ platform }}</label>
-        </div>
-      </div> -->
-  
-      <!-- <div class="col-12 text-center">
-        <button type="submit" class="cutomeherobutton dark" [disabled]="form.invalid">Submit</button>
-      </div> -->
+
+    <!-- Business Name -->
     <div class="col-md-6">
-      <input type="text" class="form-control" formControlName="business" placeholder="Business Name" />
-    </div>
-
-    <div class="col-md-6">
-      <input type="email" class="form-control" formControlName="email" placeholder="Email" />
-    </div>
-
-    <div class="col-md-6">
-      <input type="number" step="0.01" class="form-control" formControlName="monthly" placeholder="Monthly Ad Budget" />
-
-    </div>
-     <div class="col-md-6">
-      <input type="number" step="0.01" class="form-control" formControlName="monthly" placeholder="Phone (optional)" />
-
-    </div>
- </div>
-    <div class="col-md-12 margins">
-      <label class="form-label d-block">Platforms of Interest</label>
-      <div class="form-check form-check-inline" *ngFor="let platform of platforms; let i = index">
-        <input class="form-check-input" type="checkbox" [formControl]="platformControls.at(i)" />
-        <label class="form-check-label">{{ platform }}</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="business"
+        placeholder="Business Name"
+      />
+      <div *ngIf="form.get('business')?.touched && form.get('business')?.invalid" class="text-danger mt-1">
+        Business name is required.
       </div>
     </div>
 
-    <div class="col-12 submis">
-      <button type="submit" class="cutomeherobutton" [disabled]="form.invalid">Submit</button>
+    <!-- Email -->
+    <div class="col-md-6">
+      <input
+        type="email"
+        class="form-control"
+        formControlName="email"
+        placeholder="Email"
+      />
+      <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="text-danger mt-1">
+        <div *ngIf="form.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="form.get('email')?.errors?.['email']">Enter a valid email.</div>
+      </div>
     </div>
 
+    <!-- Monthly Ad Budget -->
+    <div class="col-md-6">
+      <input
+        type="number"
+        step="0.01"
+        class="form-control"
+        formControlName="monthly"
+        placeholder="Monthly Ad Budget"
+      />
+      <div *ngIf="form.get('monthly')?.touched && form.get('monthly')?.invalid" class="text-danger mt-1">
+        <div *ngIf="form.get('monthly')?.errors?.['required']">Monthly budget is required.</div>
+        <div *ngIf="form.get('monthly')?.errors?.['min']">Enter a valid budget amount.</div>
+      </div>
+    </div>
+
+    <!-- Phone (optional) -->
+    <div class="col-md-6">
+     <input
+  type="tel"
+  class="form-control"
+  formControlName="phone"
+  placeholder="Phone (optional)"
+  pattern="[0-9]{10}"
+/>
+<div *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid" class="text-danger mt-1">
+  <div *ngIf="form.get('phone')?.errors?.['pattern']">Enter a valid 10-digit phone number.</div>
+</div>
+    </div>
+
+  </div>
+
+  <!-- Platforms of Interest -->
+  <div class="col-md-12 margins mt-3">
+    <label class="form-label d-block">Platforms of Interest</label>
+    <div class="form-check form-check-inline" *ngFor="let platform of platforms; let i = index">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        [formControl]="platformControls.at(i)"
+      />
+      <label class="form-check-label">{{ platform }}</label>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="col-12 submis mt-4">
+    <button type="submit" class="cutomeherobutton" [disabled]="form.invalid">Submit</button>
+  </div>
 </form>
+

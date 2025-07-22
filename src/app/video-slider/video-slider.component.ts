@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import $ from 'jquery';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SafeUrlPipe } from '../safe-url.pipe';
 

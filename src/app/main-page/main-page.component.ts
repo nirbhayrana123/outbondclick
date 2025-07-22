@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { TestimonialComponent } from '../testimonial/testimonial.component';
 import { VideoSliderComponent } from '../video-slider/video-slider.component';
 import { FormComponent } from '../form/form.component';
@@ -7,9 +7,10 @@ import { CircleProgressOptions, NgCircleProgressModule } from 'ng-circle-progres
 import { interval } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ShortVideoComponent } from '../short-video/short-video.component';
 @Component({
   selector: 'app-main-page',
-  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule],
+  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule, ShortVideoComponent],
 
   providers: [
     {
@@ -23,28 +24,28 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
         innerStrokeWidth: 0
       }
     }
-  ],
+  ],  
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {
+  
+// isModalOpen = false;
+//   videoUrl!: SafeResourceUrl;
 
+//   constructor(private sanitizer: DomSanitizer) {}
 
-   showModal = false;
-  safeVideoUrl!: SafeResourceUrl;
+//   openModal() {
+//     const url = 'https://www.youtube.com/embed/EKHjK_iBROA?autoplay=1';
+//     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+//     this.isModalOpen = true;
+//   }
 
-  constructor(private sanitizer: DomSanitizer) {}
+//   closeModal() {
+//     this.isModalOpen = false;
+//   }
 
-  openModal() {
-    const url = 'https://www.youtube.com/embed/EKHjK_iBROA?autoplay=1&mute=1';
-    this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
-    this.showModal = true;
-  }
-
-  closeModal() {
-    this.showModal = false;
-    this.safeVideoUrl = '';
-  }
+   
 
 animateValues() {
   this.animate('fromValue', 25, 50, 1);
