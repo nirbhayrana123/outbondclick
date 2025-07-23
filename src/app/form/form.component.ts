@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormArray, FormControl, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { Router } from '@angular/router';
@@ -22,13 +22,29 @@ export class FormComponent {
       email: ['', [Validators.required, Validators.email]],
       monthly: ['', [Validators.required, Validators.min(1)]],
       phone: ['', [Validators.pattern('^[0-9]{10}$')]],
-      platforms: this.fb.array(this.platforms.map(() => false))
+      platforms: this.buildPlatformsFormArray(),
     });
   }
-
-  get platformControls(): FormArray<FormControl<boolean>> {
-    return this.form.get('platforms') as FormArray<FormControl<boolean>>;
-  }
+get platformControls(): FormArray {
+  return this.form.get('platforms') as FormArray;
+}
+buildPlatformsFormArray(): FormArray {
+  const arr = this.platforms.map(() => this.fb.control(false));
+  const formArray = new FormArray(arr);
+  formArray.setValidators(this.minSelectedCheckboxes(1));
+  return formArray;
+}
+minSelectedCheckboxes(min = 1): ValidatorFn {
+  return (formArray: AbstractControl): ValidationErrors | null => {
+    const totalSelected = (formArray as FormArray).controls
+      .map(control => control.value)
+      .reduce((prev, next) => next ? prev + 1 : prev, 0);
+    return totalSelected >= min ? null : { required: true };
+  };
+}
+  // get platformControls(): FormArray<FormControl<boolean>> {
+  //   return this.form.get('platforms') as FormArray<FormControl<boolean>>;
+  // }
 
   onSubmit() {
     if (this.form.invalid) {
