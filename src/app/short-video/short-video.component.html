@@ -1,0 +1,21 @@
+<!-- Thumbnail to open modal -->
+<div class="video-thumbnail" (click)="openModal()">
+  <img src="https://img.youtube.com/vi/EKHjK_iBROA/maxresdefault.jpg" alt="Video Thumbnail" />
+  <div class="play-icon">▶</div>
+</div>
+
+<!-- Modal -->
+<div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <iframe
+      width="1000"
+      height="400"
+      [src]="videoUrl"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+    <button class="close-btn" (click)="closeModal()">✖</button>
+  </div>
+</div>
+
