@@ -50,7 +50,7 @@ export class TestimonialComponent {
       text: "Absolutely amazing job! After 2 years of searching, we finally found someone who truly delivered well above our expectations! So easy work with, able to make calculated adjustment without direction and a remarkable attitude, Govind is our all-time favorite Upworks contractor. Understands paid ad campaigns on a very high level! I am not the easiest business owner to please, but was 150% satisfied with the experience with Govind! Highly recommen",
       name: "Richard Force",
       role: "Client",
-      img: "img/testimonials2.webp"
+      img: "img/testimonials5.webp"
     },
     {
       text: "Great to work with him. I already have him on the front my list for my next job in a couple of weeks.",
