@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SafeUrlPipe } from '../safe-url.pipe';
+// import { SafeUrlPipe } from '../safe-url.pipe';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -7,7 +7,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-short-video',
   standalone: true,
-  imports: [CommonModule, SlickCarouselModule, SafeUrlPipe,],
+  imports: [CommonModule, SlickCarouselModule,],
 
   templateUrl: './short-video.component.html',
   styleUrl: './short-video.component.css'

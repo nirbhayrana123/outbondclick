@@ -4,11 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import { ThankyouComponent } from './thankyou/thankyou.component';
+// import { ThankyouComponent } from './thankyou/thankyou.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ThankyouComponent, RouterModule],
+  imports: [HeaderComponent, FooterComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
