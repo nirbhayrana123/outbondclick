@@ -4,3 +4,7 @@
 .submis{margin-top: 15px;
     text-align: left;
 }
+select.form-control {
+    cursor: pointer;
+    appearance: auto;
+}

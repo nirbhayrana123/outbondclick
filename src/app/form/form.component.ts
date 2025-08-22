@@ -46,7 +46,7 @@ export class FormComponent {
       platforms: selectedPlatforms.join(', ')
     };
 
-    emailjs.send('service_tu230nm', 'template_73raqyg', templateParams, 'qBA8U4uKaTMLWVwUx')
+    emailjs.send('service_tncd9z5', 'template_55oqoxu', templateParams, 'x0K_zbImoUba_JVJ7')
       .then((result: EmailJSResponseStatus) => {
         console.log('Email sent successfully:', result.text);
         this.form.reset();
