@@ -558,7 +558,7 @@ section.chooes-section {
   padding: 15px 50px;
   font-weight: 800;
   overflow: hidden;
-  color: #ffffff; 
+  color: #ffffff;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   border-radius: 10px;
@@ -668,17 +668,40 @@ section,
 }
 
 
-.image-wrapper {
+.image-wrapper.mb4 {
   display: flex;
   align-items: center;
   gap: 23px;
   justify-content: center;
   position: relative;
   z-index: 1;
+  height: 100%;
+}
+
+.hfull {
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .image-wrapper figure.imgrs {
-  margin: 0 0 1rem;
+  position: relative;
+  width: 100%;
+  height: 50%
+}
+
+.imglist.hfull.aos-init.aos-animate {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.hfull img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: cover;
 }
 
 .image-wrapper figure.imgrs img {
@@ -715,8 +738,9 @@ section,
   height: auto;
   background-color: #fff;
 }
+
 .trustsection {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .customers-badge {
@@ -765,6 +789,7 @@ section,
   background-color: #2a1c0b2b;
 } */
 
+
 .container-fluid {
   padding-right: 40px !important;
   padding-left: 40px !important;
@@ -808,11 +833,11 @@ section,
 
 
 .cutomeherobutton:hover {
-    color: #ffffff;
-    background-color: #a9343b !important; 
+  color: #ffffff;
+  background-color: #a9343b !important;
 }
 
- 
+
 
 
 .cutomeherobutton:hover::after {
@@ -1405,7 +1430,7 @@ section.case-sturdy-section h2 {
   position: relative;
   width: 100%;
   border: 1px solid #ccc;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: #00016b;
 }
 
@@ -1424,8 +1449,9 @@ section.case-sturdy-section h2 {
   margin: 0 !important;
   color: var(--accent-color);
 }
+
 .slide.somlelogo img {
-    max-width: 100px;
+  max-width: 100px;
 }
 
 
@@ -2021,34 +2047,37 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+
 .about .feature-list li {
-        font-size: 18px!important;
-    }
- 
-img.graphic-left.rights-google {
-    left: 230px;
-    width: 80px;
-    top: 133px;
+  font-size: 18px !important;
 }
+
+img.graphic-left.rights-google {
+  left: 230px;
+  width: 80px;
+  top: 133px;
+}
+
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-   .cutomeherobutton {
-    font-size: 16px;
-    width: 315px;
-    font-weight: 600;
-    background-color: #00016b !important;
-    color: #ffffff;
-    padding: 13px 30px !important;
-    border-radius: 10px;
-    font-family: var(--poppins-font);
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-  }
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cutomeherobutton {
+  font-size: 16px;
+  width: 315px;
+  font-weight: 600;
+  background-color: #00016b !important;
+  color: #ffffff;
+  padding: 13px 30px !important;
+  border-radius: 10px;
+  font-family: var(--poppins-font);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
 
 
 
@@ -2153,9 +2182,9 @@ img.graphic-left.rights-google {
     font-size: 16px;
   }
 
- 
 
-  
+
+
 
   .vecters-img h2 {
     font-size: 32px;
@@ -2334,6 +2363,8 @@ img.graphic-left.rights-google {
     left: -100%;
     visibility: visible;
   }
+
+
 }
 
 @media (max-width: 1200px) {
@@ -2347,6 +2378,13 @@ img.graphic-left.rights-google {
     margin-right: 10px;
     padding: 10px 5px 10px 15px;
   }
+  .hfull img {
+    position: static; 
+}
+.image-wrapper.mb4 {
+    padding-bottom: 45px;
+}
+
 }
 
 @media (max-width: 1199px) {
@@ -2370,7 +2408,7 @@ img.graphic-left.rights-google {
 
 @media (max-width: 992px) {
 
-    
+
   .why-higroth-right {
     padding-left: 0;
     position: relative;
@@ -2571,9 +2609,10 @@ img.graphic-left.rights-google {
   .platform-eading h3 {
     font-size: 30px;
   }
-    .hero {
-        padding-top: 160px;
-    }
+
+  .hero {
+    padding-top: 160px;
+  }
 
 
 
@@ -2590,10 +2629,10 @@ img.graphic-left.rights-google {
     padding-top: 0;
   }
 
- .header .logo img {
+  .header .logo img {
     max-height: max-content;
     width: 240px;
-}
+  }
 
   .content-case h5 {
     font-size: 20px;
