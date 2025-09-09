@@ -13,7 +13,7 @@ import { RouterModule, RouterLink } from '@angular/router';
 // import { RouterLink } from "../../../node_modules/@angular/router/router_module.d-BivBj8FC";
 @Component({
   selector: 'app-main-page',
-  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule, ShortVideoComponent, RouterLink],
+  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule, ShortVideoComponent],
 
   providers: [
     {
