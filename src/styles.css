@@ -123,8 +123,10 @@ h6 {
     position: fixed;
     bottom: 25px;
     right: 20px;
-    width: 65px;
+    width: 50px;
     z-index: 99;
+    box-shadow: 1px 1px 6px 4px #01026c3d;
+    border-radius: 51px;
 }
 @keyframes php-email-form-loading {
   0% {
