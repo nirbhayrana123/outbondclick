@@ -119,7 +119,13 @@ h6 {
   border-top-color: var(--surface-color);
   animation: php-email-form-loading 1s linear infinite;
 }
-
+.whatsaapicon {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 65px;
+    z-index: 99;
+}
 @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
@@ -2404,6 +2410,7 @@ img.graphic-left.rights-google {
   .navmenu ul {
     width: 40%;
   }
+ 
 }
 
 @media (max-width: 992px) {
@@ -2580,7 +2587,11 @@ img.graphic-left.rights-google {
     flex-wrap: wrap;
     justify-content: center;
   }
-
+    .whatsaapicon {
+        bottom: 20px;
+        width: 60px;
+        right: 15px;
+    }
   .content-new h3 {
     font-size: 30px;
     text-align: center;

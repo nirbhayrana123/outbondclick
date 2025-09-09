@@ -23,6 +23,7 @@ export class FormComponent {
       monthly: ['', [Validators.required, Validators.min(1)]],
       phone: ['', [Validators.pattern('^[0-9]{10}$')]],
       platforms: this.fb.array(this.platforms.map(() => false))
+      
     });
   }
  
@@ -31,6 +32,7 @@ export class FormComponent {
   }
 
   onSubmit() {
+     console.log('Form:', this.form.value);
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
@@ -44,13 +46,14 @@ export class FormComponent {
       monthly: this.form.value.monthly,
       phone: this.form.value.phone || 'Not provided',
       platforms: selectedPlatforms.join(', ')
+      // platforms: selectedPlatforms.length ? selectedPlatforms.join(', ') : 'None'
     };
-
-    emailjs.send('service_y8dtyeq', 'template_73raqyg', templateParams, 'qBA8U4uKaTMLWVwUx')
+console.log('Template Params:', templateParams);
+    emailjs.send('service_y8dtyeq', 'template_55oqoxu', templateParams, 'x0K_zbImoUba_JVJ7')
       .then((result: EmailJSResponseStatus) => {
         console.log('Email sent successfully:', result.text);
         this.form.reset();
-        this.router.navigate(['/thank-you']);  // ✅ Redirect to thank you page
+        this.router.navigate(['/thank-you']); 
       }, (error) => {
         console.error('Email failed to send:', error);
         alert('There was an error sending your form. Please try again later.');

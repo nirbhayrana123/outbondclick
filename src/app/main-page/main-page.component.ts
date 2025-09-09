@@ -8,9 +8,12 @@ import { interval } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ShortVideoComponent } from '../short-video/short-video.component';
+import { RouterModule, RouterLink } from '@angular/router';
+
+// import { RouterLink } from "../../../node_modules/@angular/router/router_module.d-BivBj8FC";
 @Component({
   selector: 'app-main-page',
-  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule, ShortVideoComponent],
+  imports: [TestimonialComponent, VideoSliderComponent, FormComponent, FaqComponent, NgCircleProgressModule, ShortVideoComponent, RouterLink],
 
   providers: [
     {
